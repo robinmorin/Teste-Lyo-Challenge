@@ -1,5 +1,6 @@
 package br.com.teste.models;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -12,6 +13,7 @@ import java.util.Date;
 @Data
 @Entity
 @Table(name = "products")
+@JsonPropertyOrder({"productid","productname","price_unit","create_at","status"})
 public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

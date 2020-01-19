@@ -9,7 +9,6 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-
 @Data
 @Entity
 @Table(name = "costumers")
@@ -33,7 +32,6 @@ public class Costumer {
     @DateTimeFormat(pattern ="yyyy-MM-dd")
     private Date create_at;
 
-    @NotEmpty
     private int status;
 
 }
